@@ -1,23 +1,30 @@
 {
-  "name": "creative-agency-server",
+  "name": "cogency-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev" : "nodemon index",
-    "start" : "node index"
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devSahinur/Cogency-server.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.7"
+  "bugs": {
+    "url": "https://github.com/devSahinur/Cogency-server/issues"
   },
+  "homepage": "https://github.com/devSahinur/Cogency-server#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongodb": "^3.6.9"
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

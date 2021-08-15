@@ -1,11 +1,11 @@
 const express = require('express');
 const route = express.Router();
-const {createTodo, fetchAllTodos, fetchTodo, updateTodo, deleteTodo  } = require('../controller/todoCtrl');
+const {createService, fetchAllService, fetchService, updateService, deleteService  } = require('../controller/serviceCtrl');
 
-route.post('/todos', createTodo)
-// route.get('/todos', fetchAllTodos)
-// route.get('/todos/:id', fetchTodo)
-// route.patch('/todos/:id', updateTodo)
-// route.delete('/todos/:id', deleteTodo)
+route.post('/service', createService)
+route.get('/service', fetchAllService)
+route.get('/service/:id', fetchService)
+route.patch('/service/:id', updateService)
+route.delete('/service/:id', deleteService)
 
 module.exports = {route};

@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const { dbConnect } = require('./config/dbConnect');
-const { route } = require('./routes/todoRoute');
+const { route } = require('./routers/serviceRoute');
 
 const app = express();
 

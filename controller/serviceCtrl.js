@@ -4,12 +4,7 @@ const { Service } = require('../model/Service')
 const createService = async (req, res) => {
     console.log(req.body);
     try {
-        const service = await Service.create({
-            serviceTitle: req.body.serviceTitle,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.body.image
-        });
+        const service = await Service.create(req.body);
         res.json(service);
     } catch (error) {
         res.json(error);
@@ -40,10 +35,7 @@ const fetchService = async (req, res) => {
 const updateService = async (req, res) => {
     try {
         const service = await Service.findByIdAndUpdate(req.params.id, {
-            serviceTitle: req.body.serviceTitle,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.body.image
+            $set: req.body
         });
         res.json(service);
     } catch (error) {

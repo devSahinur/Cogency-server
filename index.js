@@ -4,7 +4,10 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const { dbConnect } = require('./config/dbConnect');
+
+
 const { route } = require('./routers/serviceRoute');
+const reviewRouter = require('./routers/reviewRoute')
 
 const app = express();
 
@@ -16,7 +19,9 @@ app.use(express.json());
 app.use(cors())
 
 //Routes
+app.use('/user', reviewRouter);
 app.use('/api', route);
+
 
 //Server
 const PORT = process.env.PORT || 5000;

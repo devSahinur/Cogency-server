@@ -8,6 +8,7 @@ const { dbConnect } = require('./config/dbConnect');
 
 const { route } = require('./routers/serviceRoute');
 const reviewRouter = require('./routers/reviewRoute')
+const adminRouter =require('./routers/adminRouter')
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use(cors())
 
 //Routes
-app.use('/user', reviewRouter);
+app.use('/user', reviewRouter, adminRouter);
 app.use('/api', route);
 
 
